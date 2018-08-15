@@ -1,5 +1,5 @@
 /**
- * Operador
+ * Operator
  *
  * Classe responsável pelas operações da calculadora
  * Adição - Subtração - Multiplicação - Divisão - Conversor
@@ -8,5 +8,5 @@
  * @version 1.0
  */
 
-public class Operador {
+public class Operator {
 }
