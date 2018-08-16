@@ -1,3 +1,5 @@
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+
 import java.util.Scanner;
 
 /**
@@ -23,78 +25,78 @@ public class Calculator {
         Scanner input = new Scanner(System.in);
         Menu menu = new Menu();
 
-        do {
+        while (true) {
             menu.menu();
-            switch (input.nextInt()) {
-                case 1:
+            switch (input.next()) {
+                case "1":
                     normalCacl();
                     break;
-                case 2:
+                case "2":
                     converter();
                     break;
-                case 0:
+                case "0":
                     System.exit(1);
                     break;
                 default:
                     System.out.println("Error!");
                     break;
             }
-        } while (input.nextInt() != 0);
+        }
     }
 
     private static void converter() {
         Scanner input = new Scanner(System.in);
         Menu menu = new Menu();
 
-        do {
+        while (true) {
             menu.menuConvert();
-            switch (input.nextInt()) {
-                case 1:
+            switch (input.next()) {
+                case "1":
                     convertCoin();
                     break;
-                case 2:
+                case "2":
                     convertTime();
                     break;
-                case 3:
+                case "3":
                     convertTemp();
                     break;
-                case 4:
+                case "4":
                     convertLength();
                     break;
-                case 5:
+                case "5":
                     convertVelocity();
                     break;
-                case 0:
+                case "0":
                     calcRun();
                     break;
                 default:
                     System.out.println("Error!");
                     break;
             }
-        } while (input.nextInt() != 0);
+        }
     }
 
     private static void convertVelocity() {
         Scanner input = new Scanner(System.in);
         Menu menu = new Menu();
 
-        do {
+        while (true) {
             menu.menuConvertVelocity();
-            switch (input.nextInt()) {
-                case 1:
+            switch (input.next()) {
+                case "1":
                     mpsToAllVelocity();
                     break;
-                case 2:
+                case "2":
                     kphToAllVelocity();
                     break;
-                case 0:
+                case "0":
                     converter();
                     break;
                 default:
                     System.out.println("Erro");
                     break;
             }
-        } while (input.nextInt() != 0);
+        }
     }
 
     private static void kphToAllVelocity() {
@@ -109,23 +111,23 @@ public class Calculator {
         Scanner input = new Scanner(System.in);
         Menu menu = new Menu();
 
-        do {
+        while (true) {
             menu.menuConvertLength();
-            switch (input.nextInt()) {
-                case 1:
+            switch (input.next()) {
+                case "1":
                     meterToAllLength();
                     break;
-                case 2:
+                case "2":
                     kmToAllLength();
                     break;
-                case 0:
+                case "0":
                     converter();
                     break;
                 default:
                     System.out.println("Erro!");
                     break;
             }
-        } while (input.nextInt() != 0);
+        }
     }
 
     private static void kmToAllLength() {
@@ -140,23 +142,23 @@ public class Calculator {
         Scanner input = new Scanner(System.in);
         Menu menu = new Menu();
 
-        do {
+        while (true){
             menu.menuConvertTemp();
-            switch (input.nextInt()) {
-                case 1:
+            switch (input.next()) {
+                case "1":
                     celsiusToAllTemp();
                     break;
-                case 2:
+                case "2":
                     fahrenheitToAllTemp();
                     break;
-                case 0:
+                case "0":
                     converter();
                     break;
                 default:
                     System.out.println("Erro!");
                     break;
             }
-        } while (input.nextInt() != 0);
+        }
     }
 
     private static void celsiusToAllTemp() {
@@ -171,26 +173,26 @@ public class Calculator {
         Scanner input = new Scanner(System.in);
         Menu menu = new Menu();
 
-        do {
+        while (true) {
             menu.menuConvertTime();
-            switch (input.nextInt()) {
-                case 1:
+            switch (input.next()) {
+                case "1":
                     secondToAllTime();
                     break;
-                case 2:
+                case "2":
                     minuteToAllTime();
                     break;
-                case 3:
+                case "3":
                     hourToAllTime();
                     break;
-                case 0:
+                case "0":
                     converter();
                     break;
                 default:
                     System.out.println("Erro!");
                     break;
             }
-        } while (input.nextInt() != 0);
+        }
     }
 
     private static void hourToAllTime() {
@@ -209,30 +211,36 @@ public class Calculator {
         Scanner input = new Scanner(System.in);
         Menu menu = new Menu();
 
-        do {
+        while (true) {
             menu.menuConvertCoin();
-            switch (input.nextInt()) {
-                case 1:
+            switch (input.next()) {
+                case "1":
                     dollarToAllCoin();
                     break;
-                case 2:
+                case "2":
                     euroToAllCoin();
                     break;
-                case 3:
+                case "3":
                     libraToAllCoin();
                     break;
-                case 0:
+                case "0":
                     converter();
                     break;
                 default:
                     System.out.println("Erro!");
                     break;
             }
-        } while (input.nextInt() != 0);
+        }
     }
 
     private static void libraToAllCoin() {
+        Operator operator = new Operator();
+        Menu menu = new Menu();
+        Scanner input  = new Scanner(System.in);
 
+        /*while (true) {
+            menu.headerCoin(Coin.LIBRA);
+        }*/
     }
 
     private static void euroToAllCoin() {
@@ -244,7 +252,13 @@ public class Calculator {
     }
 
     private static void normalCacl() {
+        Operator operator = new Operator();
         Menu menu = new Menu();
-        menu.menuCalc();
+        Scanner input = new Scanner(System.in);
+
+        do {
+            menu.headerCalc();
+            //operator.calcResult(input.next());
+        } while (input.next().equals("0"));
     }
 }
