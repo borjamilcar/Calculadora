@@ -75,23 +75,172 @@ public class Calculator {
     }
 
     private static void convertVelocity() {
+        Scanner input = new Scanner(System.in);
         Menu menu = new Menu();
+
+        do {
+            menu.menuConvertVelocity();
+            switch (input.nextInt()) {
+                case 1:
+                    mpsToAllVelocity();
+                    break;
+                case 2:
+                    kphToAllVelocity();
+                    break;
+                case 0:
+                    converter();
+                    break;
+                default:
+                    System.out.println("Erro");
+                    break;
+            }
+        } while (input.nextInt() != 0);
+    }
+
+    private static void kphToAllVelocity() {
+
+    }
+
+    private static void mpsToAllVelocity() {
+
     }
 
     private static void convertLength() {
+        Scanner input = new Scanner(System.in);
+        Menu menu = new Menu();
+
+        do {
+            menu.menuConvertLength();
+            switch (input.nextInt()) {
+                case 1:
+                    meterToAllLength();
+                    break;
+                case 2:
+                    kmToAllLength();
+                    break;
+                case 0:
+                    converter();
+                    break;
+                default:
+                    System.out.println("Erro!");
+                    break;
+            }
+        } while (input.nextInt() != 0);
+    }
+
+    private static void kmToAllLength() {
+
+    }
+
+    private static void meterToAllLength() {
 
     }
 
     private static void convertTemp() {
-        
+        Scanner input = new Scanner(System.in);
+        Menu menu = new Menu();
+
+        do {
+            menu.menuConvertTemp();
+            switch (input.nextInt()) {
+                case 1:
+                    celsiusToAllTemp();
+                    break;
+                case 2:
+                    fahrenheitToAllTemp();
+                    break;
+                case 0:
+                    converter();
+                    break;
+                default:
+                    System.out.println("Erro!");
+                    break;
+            }
+        } while (input.nextInt() != 0);
+    }
+
+    private static void celsiusToAllTemp() {
+
+    }
+
+    private static void fahrenheitToAllTemp() {
+
     }
 
     private static void convertTime() {
+        Scanner input = new Scanner(System.in);
+        Menu menu = new Menu();
+
+        do {
+            menu.menuConvertTime();
+            switch (input.nextInt()) {
+                case 1:
+                    secondToAllTime();
+                    break;
+                case 2:
+                    minuteToAllTime();
+                    break;
+                case 3:
+                    hourToAllTime();
+                    break;
+                case 0:
+                    converter();
+                    break;
+                default:
+                    System.out.println("Erro!");
+                    break;
+            }
+        } while (input.nextInt() != 0);
+    }
+
+    private static void hourToAllTime() {
+
+    }
+
+    private static void minuteToAllTime() {
+
+    }
+
+    private static void secondToAllTime() {
 
     }
 
     private static void convertCoin() {
-        
+        Scanner input = new Scanner(System.in);
+        Menu menu = new Menu();
+
+        do {
+            menu.menuConvertCoin();
+            switch (input.nextInt()) {
+                case 1:
+                    dollarToAllCoin();
+                    break;
+                case 2:
+                    euroToAllCoin();
+                    break;
+                case 3:
+                    libraToAllCoin();
+                    break;
+                case 0:
+                    converter();
+                    break;
+                default:
+                    System.out.println("Erro!");
+                    break;
+            }
+        } while (input.nextInt() != 0);
+    }
+
+    private static void libraToAllCoin() {
+
+    }
+
+    private static void euroToAllCoin() {
+
+    }
+
+    private static void dollarToAllCoin() {
+
     }
 
     private static void normalCacl() {

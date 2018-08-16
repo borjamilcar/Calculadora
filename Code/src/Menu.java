@@ -37,7 +37,7 @@ public class Menu {
             System.out.println("+++++++++++++++++++++++++++++++++++++");
         } else if (headerType.VELOCITY.equals(type)) {
             System.out.println("+++++++++++++++++++++++++++++++++++++");
-            System.out.println("+         Converter - Velocity       +");
+            System.out.println("+         Converter - Velocity      +");
             System.out.println("+++++++++++++++++++++++++++++++++++++");
         } else if (headerType.MAIN.equals(type)){
             System.out.println("+++++++++++++++++++++++++++++++++++++");
@@ -82,7 +82,7 @@ public class Menu {
 
     public void menuConvertCoin() {
         header(headerType.COIN);
-        System.out.println("+ 1 - DOLLAR ($)                     +");
+        System.out.println("+ 1 - DOLLAR ($)                    +");
         System.out.println("+ 2 - EURO (€)                      +");
         System.out.println("+ 3 - LIBRA (£)                     +");
         option(true);
@@ -112,8 +112,8 @@ public class Menu {
 
     public void menuConvertVelocity() {
         header(headerType.VELOCITY);
-        System.out.println("+ 1 - Meters per second (m/s)      +");
-        System.out.println("+ 2 - Kilometers per hour (km/h)   +");
+        System.out.println("+ 1 - Meters per second (m/s)       +");
+        System.out.println("+ 2 - Kilometers per hour (km/h)    +");
         option(true);
     }
 }
